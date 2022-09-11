@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
+import java.io.Serializable;
 
 @Entity
 @Data
@@ -15,7 +16,8 @@ import javax.validation.constraints.NotEmpty;
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
-public class ClienteEntidade {
+public class ClienteEntidade implements Serializable {
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
